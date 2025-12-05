@@ -23,8 +23,7 @@ public class NormalAttackSkill : BaseSkill
 
         foreach (var point in patern.hitPoints)
         {
-            var bullet = PoolManager.Instance.Rent(m_BulletPrefab);
-            bullet.transform.position = point.position;
+            var bullet = PoolManager.Instance.Rent(m_BulletPrefab, point.position);
             bullet.transform.rotation = point.rotation;
         }
     }

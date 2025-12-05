@@ -11,7 +11,7 @@ public class PoolManager : MonoBehaviour
         Instance = this;
     }
 
-    public GameObject Rent(GameObject prefab)
+    public GameObject Rent(GameObject prefab, Vector2 pos = default)
     {
         if (pool.ContainsKey(prefab) == false)
         {
@@ -23,11 +23,13 @@ public class PoolManager : MonoBehaviour
         {
             active = Instantiate(prefab);
             pool[prefab].Add(active);
+            active.transform.position = pos;
         }
         else
         {
-            active.SetActive(true);
+            active.transform.position = pos;
         }
+        active.SetActive(true);
         return active;
     }
 

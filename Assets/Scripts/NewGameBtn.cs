@@ -13,6 +13,6 @@ public class NewGameBtn : MonoBehaviour
     }
     private void OnPlayGameButtonClicked()
     {
-        SceneManager.LoadScene("Level 0");
+        SceneManager.LoadScene("Level 1");
     }
 }

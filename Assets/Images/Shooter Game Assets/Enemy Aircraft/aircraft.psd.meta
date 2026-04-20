@@ -145,10 +145,10 @@ TextureImporter:
       name: aircraft_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 75
-        width: 310
-        height: 116
+        x: 8
+        y: 76
+        width: 308
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +167,10 @@ TextureImporter:
       name: aircraft_1
       rect:
         serializedVersion: 2
-        x: 327
-        y: 75
-        width: 310
-        height: 116
+        x: 328
+        y: 76
+        width: 308
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e84b2453de6a18e48ac85f88456eddc1
     internalID: 0
     vertices: []
     indices: 

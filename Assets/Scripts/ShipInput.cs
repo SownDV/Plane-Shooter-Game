@@ -9,10 +9,12 @@ public class ShipInput : MonoBehaviour
     }
     public void OnUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
+            // Đồng thời thi triển kỹ năng (nếu bạn muốn vừa click vừa dùng skill)
             Controller.Skills.CastSkill(0);
         }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             Controller.Skills.CastSkill(1);

@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-///  manage skills in this entity
-/// </summary>
 public class ShipSkills : MonoBehaviour
 {
     public List<BaseSkill> m_Skills = new List<BaseSkill>();
@@ -16,14 +13,20 @@ public class ShipSkills : MonoBehaviour
         }
     }
 
-
     public void CastSkill(int id)
     {
         var skill = m_Skills.Find(x => x.SkillId == id);
         if (skill == null) return;
+
         if (skill.CanCast)
         {
             skill.Cast();
+
+            // GỌI ÂM THANH BẮN SÚNG TẠI ĐÂY
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.shootSound);
+            }
         }
     }
 
@@ -35,8 +38,3 @@ public class ShipSkills : MonoBehaviour
         }
     }
 }
-/*
-skill co cooldown
-skill chay ntn
-
-*/

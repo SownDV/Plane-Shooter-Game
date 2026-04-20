@@ -15,7 +15,12 @@ public class NormalAttackSkill : BaseSkill
     {
         base.Cast();
         // spawn bullet
-        SpawnBullet(m_Patterns[Owner.Level]);
+        int targetPatternInde = Owner.Level - 1;
+        if (targetPatternInde >= m_Patterns.Count)
+        {
+            targetPatternInde = m_Patterns.Count - 1;
+        }
+        SpawnBullet(m_Patterns[targetPatternInde]); // because of level start at 1
     }
 
     void SpawnBullet(BulletPattern patern)
